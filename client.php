@@ -16,7 +16,7 @@ SWOOLE_SOCK_ASYNC 异步客户端
 
 $client = new swoole_client(SWOOLE_SOCK_TCP, SWOOLE_SOCK_SYNC);
 // 随后建立连接，连接失败直接退出并打印错误码
-$client->connect('0.0.0.0', 9501) || exit("connect failed. Error: {$client->errCode}\n");
+$client->connect('192.168.231.128:22', 9501) || exit("connect failed. Error: {$client->errCode}\n");
 // 向服务端发送数据
 $client->send("我要连接服务器");
 // 从服务端接收数据

@@ -1,7 +1,7 @@
 <?php
 
 //创建Server对象，监听 0.0.0.0:9501端口
-$serv = new swoole_server("0.0.0.0", 9501);
+$serv = new swoole_server("192.168.231.128:22", 9501);
 
 $serv->set([
     'worker_num' => 2, //设置进程
